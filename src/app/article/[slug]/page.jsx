@@ -38,6 +38,7 @@ export default async function ArticlePage({ params }) {
           className="prose prose-invert prose-lg max-w-none"
           dangerouslySetInnerHTML={{ __html: article.content }}
         />
+<<<<<<< HEAD
         {Array.isArray(article.media) && article.media.length > 0 && (
           <div className="grid gap-6 mb-8 sm:grid-cols-1 md:grid-cols-2">
             {article.media.map((linkHtml, index) => (
@@ -47,6 +48,23 @@ export default async function ArticlePage({ params }) {
                 className="text-[#0ef] underline cursor-pointer"
               />
             ))}
+=======
+        {/* ✅ Media Links Section */}
+        {article.media && article.media.length > 0 && (
+          <div className="mt-12">
+            <h2 className="text-2xl font-semibold text-[#0ef] mb-4">
+              🔗 Related Links
+            </h2>
+            <div className="grid gap-4">
+              {article.media.map((linkHtml, index) => (
+                <div
+                  key={index}
+                  className="text-[#0ef] underline cursor-pointer"
+                  dangerouslySetInnerHTML={{ __html: linkHtml }}
+                />
+              ))}
+            </div>
+>>>>>>> 4cbba95 (final-commit)
           </div>
         )}
         <div className="mt-16 border-t border-gray-700 pt-10">

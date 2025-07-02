@@ -18,6 +18,10 @@ export default function Navbar() {
       </div>
 
       <div className="flex items-center gap-4">
+<<<<<<< HEAD
+=======
+        <RefreshFeedButton />
+>>>>>>> 4cbba95 (final-commit)
         <AuthButton />
       </div>
     </nav>

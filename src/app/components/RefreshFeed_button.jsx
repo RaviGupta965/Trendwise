@@ -8,7 +8,7 @@ export default function RefreshFeedButton() {
   const handleRefresh = async () => {
     setLoading(true);
     try {
-      const res = await fetch("/api/article", { method: "POST" });
+      const res = await fetch("https://trendwisebackend.onrender.com/api/article", { method: "POST" });
       if (res.ok) {
         setDone(true);
       }
